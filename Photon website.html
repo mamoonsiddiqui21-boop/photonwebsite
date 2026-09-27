@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Photon</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 25px 15px;
+        }
+
+        .logo {
+            flex-shrink: 0;
+        }
+
+        .logo h1 {
+            font-size: 32px;
+            font-weight: 500;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 13px;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #55c7bd;
+        }
+
+        nav ul li:first-child a {
+            color: #55c7bd;
+        }
+
+        .gallery-arrow {
+            font-size: 9px;
+            margin-left: 4px;
+        }
+
+        .social {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            flex-shrink: 0;
+        }
+
+        .social a {
+            color: #111;
+            font-size: 15px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social a:hover {
+            color: #1fc4b6;
+        }
+
+        .gallery {
+            width: 100%;
+            display: flex;
+            gap: 22px;
+            padding: 8px 14px 0;
+        }
+
+        .card {
+            position: relative;
+            width: 33.333%;
+            height: 435px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: 0.5s ease;
+        }
+
+        .card::after {
+            content: "";
+            position: absolute;
+            
+            background: rgba(0, 0, 0, 0.12);
+        }
+
+        .content {
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            width: 100%;
+        }
+
+        .content h2 {
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .content a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            border: 2px solid white;
+            padding: 12px 27px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            transition: 0.5s;
+        }
+
+        .content a:hover {
+            background: white;
+            color: #111;
+        }
+
+        .card:hover img {
+            transform: scale(1.04);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo"><h1>Photon</h1></div>
+
+        <nav>
+            <ul>
+
+                <li><a href="#">HOME</a></li>
+
+                <li><a href="#">GALLERY<span class="gallery-arrow">▼</span></a></li>
+
+                <li><a href="#">SERVICES</a></li>
+
+                <li><a href="#">BLOG</a></li>
+
+                <li><a href="#">ABOUT</a></li>
+
+                <li><a href="#">REVIEWS</a></li>
+
+                <li><a href="#">CONTACT</a></li>
+
+            </ul>
+        </nav>
+
+        <div class="social">
+
+            <a href="#"><i class="fa-brands fa-facebook-f"></i> </a>
+
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+
+        </div>
+
+    </header>
+
+    <section class="gallery">
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=85"alt="Nature">
+            <div class="content">
+                <h2>Nature</h2>
+                <a href="#"> MORE PHOTOS</a>
+            </div>
+        </div>
+
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=85"alt="Portrait">
+            <div class="content">
+                <h2>Portrait</h2>
+                <a href="#">MORE PHOTOS</a>
+            </div>
+        </div>
+
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=85"alt="People">
+            <div class="content">
+                <h2>People</h2>
+                <a href="#">MORE PHOTOS</a>
+            </div>
+        </div>
+
+</section>
+</body>
+</html>
